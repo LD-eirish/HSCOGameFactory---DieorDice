@@ -28,7 +28,8 @@ offset_left = 130.0
 offset_top = 8.0
 offset_right = 992.0
 offset_bottom = 35.0
-value = 100.0
+max_value = 50.0
+value = 50.0
 show_percentage = false
 
 [node name="TXT BAR DIE d4" type="Label" parent="."]

@@ -10,39 +10,51 @@ extends CanvasGroup
 @onready var bar_player = $"BAR PLAYER"
 @onready var BossPhase = 1
 
+
+func _ready():
+	txt_bar_die_d_4.visible = true
+	txt_bar_die_d_6.visible = false
+	txt_bar_die_d_8.visible = false
+	txt_bar_die_d_10.visible = false
+	txt_bar_die_d_12.visible = false
+	txt_bar_die_d_20.visible = false
+	bar_die.max_value = 50
+	bar_die.value_changed = bar_die.max_value
+
+	
 func _1to2():
 	txt_bar_die_d_4.visible = false
 	txt_bar_die_d_6.visible = true
-	$"BAR DIE".max_value = 1
-	$"BAR DIE".value_changed = $"BAR DIE".max_value
+	bar_die.max_value = 75
+	bar_die.value_changed = bar_die.max_value
 
 func _2to3():
 	txt_bar_die_d_6.visible = false
 	txt_bar_die_d_8.visible = true
-	$"BAR DIE".max_value = 1
-	$"BAR DIE".value_changed = $"BAR DIE".max_value
+	bar_die.max_value = 125
+	bar_die.value_changed = bar_die.max_value
 
 func _3to4():
 	txt_bar_die_d_8.visible = false
 	txt_bar_die_d_10.visible = true
-	$"BAR DIE".max_value = 1
-	$"BAR DIE".value_changed = $"BAR DIE".max_value
+	bar_die.max_value = 200
+	bar_die.value_changed = bar_die.max_value
 
 func _4to5():
 	txt_bar_die_d_10.visible = false
 	txt_bar_die_d_12.visible = true
-	$"BAR DIE".max_value = 1
-	$"BAR DIE".value_changed = $"BAR DIE".max_value
+	bar_die.max_value = 250
+	bar_die.value_changed = bar_die.max_value
 
 func _5to6():
 	txt_bar_die_d_12.visible = false
 	txt_bar_die_d_20.visible = true
-	$"BAR DIE".max_value = 1
-	$"BAR DIE".value_changed = $"BAR DIE".max_value
+	bar_die.max_value = 1000
+	bar_die.value_changed = bar_die.max_value
 
 func _dieDMG(DEALT_DMG):
-	$"BAR DIE".value_changed = $"BAR DIE".value_changed - DEALT_DMG
-	if $"BAR DIE".value_changed == $"BAR DIE".min_value:
+	bar_die.value_changed = bar_die.value_changed - DEALT_DMG
+	if bar_die.value_changed == bar_die.min_value:
 		BossPhase +1
 		if BossPhase == 2:
 			_1to2()
@@ -58,7 +70,7 @@ func _dieDMG(DEALT_DMG):
 			get_tree().change_scene_to_file("res://scenes/GameWon.tscn")
 	
 func _playerDMG(TAKEN_DMG):
-	$"BAR PLAYER".value_changed = $"BAR PLAYER".value_changed - TAKEN_DMG
-	if $"BAR PLAYER".value_changed == $"BAR PLAYER".min_value:
+	bar_player.value_changed = bar_player.value_changed - TAKEN_DMG
+	if bar_player.value_changed == bar_player.min_value:
 		get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 
