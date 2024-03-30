@@ -13,8 +13,8 @@ func _physics_process(delta):
 
 
 func get_input():
-	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	input.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
+	input.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
 	return input.normalized()
 	
 func player_movement(delta):
