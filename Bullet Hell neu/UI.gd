@@ -60,7 +60,8 @@ func _dieDMG(DEALT_DMG):
 	
 func _playerDMG(TAKEN_DMG):
 	$"BAR PLAYER".value_changed = $"BAR PLAYER".value_changed - TAKEN_DMG
-
+	if $"BAR PLAYER".value_changed == $"BAR PLAYER".min_value:
+		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 
 
