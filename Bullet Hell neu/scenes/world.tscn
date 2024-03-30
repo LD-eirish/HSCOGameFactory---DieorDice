@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmr3t6me1xthw"]
 
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_ehuas"]
-[ext_resource type="Texture2D" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
+[ext_resource type="Texture2D" uid="uid://b4lt6dqy8jh82" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
 [ext_resource type="Texture2D" uid="uid://c8i5rku6puptn" path="res://Wobin1024.png" id="4_xxq6m"]
 
 [sub_resource type="GDScript" id="GDScript_3uf2h"]
