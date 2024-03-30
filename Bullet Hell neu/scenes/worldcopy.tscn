@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://up6tpq0nbut3"]
+
+[ext_resource type="Texture2D" uid="uid://b4lt6dqy8jh82" path="res://DM's World in Chaos.jpg" id="1_456y7"]
+[ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="2_0x3us"]
+[ext_resource type="Texture2D" path="res://Wobin1024.png" id="3_2nlxr"]
+[ext_resource type="Script" path="res://player.gd" id="4_puani"]
+[ext_resource type="PackedScene" uid="uid://ht3csjgf2tno" path="res://UI.tscn" id="5_oio1q"]
+
+[sub_resource type="GDScript" id="GDScript_3uf2h"]
+script/source = "extends CharacterBody2D
+
+class_name PlayerCharacter
+
+const max_speed = 400
+const accel = 1500 #Beschleunigung
+const friction = 600 #Reibung
+
+var input = Vector2.ZERO
+
+func _physics_process(delta):
+	player_movement(delta)
+
+
+func get_input():
+	input.x = int(Input.is_action_pressed(\"right\")) - int(Input.is_action_pressed(\"left\"))
+	input.y = int(Input.is_action_pressed(\"down\")) - int(Input.is_action_pressed(\"up\"))
+	return input.normalized()
+	
+func player_movement(delta):
+	input = get_input()
+	
+	if input == Vector2.ZERO:
+		if velocity.length() > (friction * delta):
+			velocity -= velocity.normalized() * (friction * delta)
+		else:
+			velocity = Vector2.ZERO
+	else:
+		velocity += (input * accel * delta)
+		velocity = velocity.limit_length(max_speed)
+		
+	move_and_slide()
+"
+
+[node name="world" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Dm\'sWorldInChaos" type="Sprite2D" parent="."]
+position = Vector2(2047, 2050)
+texture = ExtResource("1_456y7")
+
+[node name="player" parent="." instance=ExtResource("2_0x3us")]
+position = Vector2(600, 300)
+script = SubResource("GDScript_3uf2h")
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.55, 0.55)
+
+[node name="Sprite2D2" type="Sprite2D" parent="player"]
+position = Vector2(19, -20)
+scale = Vector2(0.189941, 0.20166)
+texture = ExtResource("3_2nlxr")
+
+[node name="player2" parent="." instance=ExtResource("2_0x3us")]
+position = Vector2(600, 300)
+script = ExtResource("4_puani")
+
+[node name="Ui" parent="." instance=ExtResource("5_oio1q")]
