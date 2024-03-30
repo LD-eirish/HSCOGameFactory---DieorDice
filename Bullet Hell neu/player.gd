@@ -7,6 +7,7 @@ const accel = 1500 #Beschleunigung
 const friction = 600 #Reibung
 var rotation_speed = 1.5
 
+
 var direction = Vector2.ZERO
 var rotation_direction = 0
 
