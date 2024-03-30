@@ -1,4 +1,4 @@
-#extends CanvasLayer
+extends CanvasLayer
 
 #signal on_transition_finished
 
