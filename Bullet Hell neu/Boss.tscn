@@ -1,0 +1,63 @@
+[gd_scene load_steps=13 format=3 uid="uid://d3yeoc8hlkmxr"]
+
+[ext_resource type="Texture2D" uid="uid://5gpsfrxm85ls" path="res://GODOT/Boss1/1.png" id="1_wa07e"]
+[ext_resource type="Texture2D" uid="uid://q2mnutcei14p" path="res://GODOT/Boss1/2.png" id="2_by4ks"]
+[ext_resource type="Texture2D" uid="uid://dm4qlwnc3jw33" path="res://GODOT/Boss1/3.png" id="3_5h1ds"]
+[ext_resource type="Texture2D" uid="uid://bo8005xv2x15o" path="res://GODOT/Boss1/4.png" id="4_0jgh4"]
+[ext_resource type="Texture2D" uid="uid://yoqr5p2ju3bf" path="res://GODOT/Boss1/5.png" id="5_anymk"]
+[ext_resource type="Texture2D" uid="uid://dqp2bnj75lj05" path="res://GODOT/Boss1/6.png" id="6_eh7s8"]
+[ext_resource type="Texture2D" uid="uid://bklij1tyut75q" path="res://GODOT/Boss1/7.png" id="7_3irxf"]
+[ext_resource type="Texture2D" uid="uid://hy62xctpt8j6" path="res://GODOT/Boss1/8.png" id="8_s48t3"]
+[ext_resource type="Texture2D" uid="uid://cnss7msch6clv" path="res://GODOT/Boss1/9.png" id="9_vbb15"]
+[ext_resource type="Texture2D" uid="uid://dyfqukey5vsu8" path="res://GODOT/Boss1/10.png" id="10_til8a"]
+[ext_resource type="Texture2D" uid="uid://bndxpquuw4wq3" path="res://GODOT/Boss1/11.png" id="11_bkd4u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwyfk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wa07e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_by4ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5h1ds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0jgh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_anymk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eh7s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3irxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s48t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vbb15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_til8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bkd4u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pwyfk")
+frame_progress = 0.921348
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, -13, -7, -47, -46, 19, 42, 18, 33, -24, -5, -47)

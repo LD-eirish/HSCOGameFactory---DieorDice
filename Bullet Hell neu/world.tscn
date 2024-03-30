@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4mygf06qiyuv"]
+[gd_scene load_steps=4 format=3 uid="uid://c4mygf06qiyuv"]
 
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_cnitr"]
 [ext_resource type="Script" path="res://player.gd" id="2_ogs50"]
+[ext_resource type="PackedScene" uid="uid://d3yeoc8hlkmxr" path="res://Boss.tscn" id="3_alvkh"]
 
 [node name="world" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_cnitr")]
-position = Vector2(600, 300)
+position = Vector2(611, 274)
 script = ExtResource("2_ogs50")
+
+[node name="Node2D" parent="." instance=ExtResource("3_alvkh")]
+position = Vector2(929, 178)
+scale = Vector2(3, 3)
