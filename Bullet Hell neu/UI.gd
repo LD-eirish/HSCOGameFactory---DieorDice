@@ -10,7 +10,6 @@ extends CanvasGroup
 @onready var bar_player = $"BAR PLAYER"
 @onready var BossPhase = 1
 
-
 func _1to2():
 	txt_bar_die_d_4.visible = false
 	txt_bar_die_d_6.visible = true
@@ -61,18 +60,5 @@ func _dieDMG(DEALT_DMG):
 func _playerDMG(TAKEN_DMG):
 	$"BAR PLAYER".value_changed = $"BAR PLAYER".value_changed - TAKEN_DMG
 	if $"BAR PLAYER".value_changed == $"BAR PLAYER".min_value:
-		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/gameOver.tscn")
 
-
-
-
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

@@ -8,15 +8,12 @@ extends Control
 @onready var options = $Options as OptionsMenu
 #@onready var real_tot = $RealTot as CanvasLayer
 
-const GameOver = preload("res://scenes/GameOver.gd")
-
 func _ready():
 	$VBoxContainer/start_button.grab_focus()
 	options.exit_options_menu.connect(on_exit_options_menu)
 	v_box_container.visible = true
 	options.visible = false
 	#real_tot.on_transition_finished.connect()
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
