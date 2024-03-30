@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmr3t6me1xthw"]
+[gd_scene load_steps=7 format=3 uid="uid://bmr3t6me1xthw"]
 
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_ehuas"]
 [ext_resource type="Texture2D" uid="uid://b4lt6dqy8jh82" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
-[ext_resource type="Texture2D" uid="uid://c8i5rku6puptn" path="res://Wobin1024.png" id="4_xxq6m"]
+[ext_resource type="Script" path="res://player.gd" id="4_oxjbe"]
+[ext_resource type="Texture2D" path="res://Wobin1024.png" id="4_xxq6m"]
+[ext_resource type="PackedScene" uid="uid://ht3csjgf2tno" path="res://UI.tscn" id="5_8tcvv"]
 
 [sub_resource type="GDScript" id="GDScript_3uf2h"]
 script/source = "extends CharacterBody2D
@@ -59,3 +61,9 @@ zoom = Vector2(0.55, 0.55)
 position = Vector2(19, -20)
 scale = Vector2(0.189941, 0.20166)
 texture = ExtResource("4_xxq6m")
+
+[node name="player2" parent="." instance=ExtResource("1_ehuas")]
+position = Vector2(600, 300)
+script = ExtResource("4_oxjbe")
+
+[node name="Ui" parent="." instance=ExtResource("5_8tcvv")]
