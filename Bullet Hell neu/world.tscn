@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4mygf06qiyuv"]
+[gd_scene load_steps=7 format=3 uid="uid://c4mygf06qiyuv"]
 
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_cnitr"]
 [ext_resource type="Script" path="res://player.gd" id="2_ogs50"]
 [ext_resource type="PackedScene" path="res://Boss.tscn" id="3_alvkh"]
+[ext_resource type="Script" path="res://Bulletmanager.gd" id="3_vutkj"]
+[ext_resource type="PackedScene" uid="uid://c4ffsfdu0tiii" path="res://bullet_new.tscn" id="4_e4ybn"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_gwws7"]
 
@@ -12,7 +14,11 @@
 position = Vector2(611, 274)
 script = ExtResource("2_ogs50")
 
-[node name="Node2D" parent="." instance=ExtResource("3_alvkh")]
+[node name="Bulletmanager" type="Node2D" parent="."]
+script = ExtResource("3_vutkj")
+bullet_scene = ExtResource("4_e4ybn")
+
+[node name="Boss" parent="." instance=ExtResource("3_alvkh")]
 position = Vector2(933, 180)
 scale = Vector2(3, 3)
 
@@ -20,3 +26,5 @@ scale = Vector2(3, 3)
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("ImageTexture_gwws7")
+
+[connection signal="shoot" from="player" to="Bulletmanager" method="_on_player_shoot"]

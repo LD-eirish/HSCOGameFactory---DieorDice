@@ -1,11 +1,8 @@
-extends Sprite2D
+extends Area2D
 
-#var bullet_position = get_node("res://player.gd").get_position()
-var bullet_position = get_global_position()
-var mouse_position = get_global_mouse_position()
-var direction = Vector2.ZERO
+var speed : int = 500
+var direction : Vector2
 
-#func _physics_process(delta):
-	
 func _process(delta):
-	print(bullet_position)
+	position += speed * direction * delta
+	
