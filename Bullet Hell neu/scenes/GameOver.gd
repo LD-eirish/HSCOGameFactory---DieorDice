@@ -1,5 +1,5 @@
 extends Control
-@onready var game_over = $"VBoxContainer/Game Over"
+@onready var game_over = $"VBoxContainer/Game Over" as VBoxContainer
 @onready var you_won = $"VBoxContainer2/Game Over" as VBoxContainer
 
 func _ready():
