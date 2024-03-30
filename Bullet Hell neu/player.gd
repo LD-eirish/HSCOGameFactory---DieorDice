@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 class_name PlayerCharacter
+@onready var _animated_sprite = $AnimatedSprite2D
 
 const max_speed = 400
 const accel = 1500 #Beschleunigung
@@ -9,6 +10,9 @@ var rotation_speed = 1.5
 
 var direction = Vector2.ZERO
 var rotation_direction = 0
+
+func _process(delta):
+	_animated_sprite.play("default")
 
 func _physics_process(delta):
 	player_movement(delta)
