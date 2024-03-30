@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdounve2fo2qi"]
+[gd_scene load_steps=3 format=3 uid="uid://bdounve2fo2qi"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_xl3hf"]
+[ext_resource type="PackedScene" uid="uid://npxuga8h2myi" path="res://scenes/options.tscn" id="2_kj2a1"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -26,20 +27,23 @@ grow_vertical = 0
 scale = Vector2(2, 2)
 alignment = 1
 
-[node name="start" type="Button" parent="VBoxContainer"]
+[node name="start_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../quit")
+focus_neighbor_top = NodePath("../quit_button")
 text = "Start"
 
-[node name="options" type="Button" parent="VBoxContainer"]
+[node name="options_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Options"
 
-[node name="quit" type="Button" parent="VBoxContainer"]
+[node name="quit_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../start")
+focus_neighbor_bottom = NodePath("../start_button")
 text = "Quit"
 
-[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[node name="Options" parent="." instance=ExtResource("2_kj2a1")]
+layout_mode = 1
+
+[connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/options_button" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_pressed"]
