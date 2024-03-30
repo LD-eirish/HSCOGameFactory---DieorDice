@@ -55,10 +55,10 @@ func _dieDMG(DEALT_DMG):
 		elif BossPhase == 6:
 			_5to6()
 		elif BossPhase == 7:
-			get_tree().change_scene_to_file("res://scenes/menu.tscn")
+			get_tree().change_scene_to_file("res://scenes/GameWon.tscn")
 	
 func _playerDMG(TAKEN_DMG):
 	$"BAR PLAYER".value_changed = $"BAR PLAYER".value_changed - TAKEN_DMG
 	if $"BAR PLAYER".value_changed == $"BAR PLAYER".min_value:
-		get_tree().change_scene_to_file("res://scenes/gameOver.tscn")
+		get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 
