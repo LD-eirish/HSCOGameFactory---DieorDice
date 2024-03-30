@@ -13,7 +13,6 @@ var rotation_direction = 0
 func _physics_process(delta):
 	player_movement(delta)
 
-
 func get_input():
 	#direction.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	#direction.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
