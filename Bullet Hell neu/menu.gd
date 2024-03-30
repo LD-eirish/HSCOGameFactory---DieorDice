@@ -1,19 +1,17 @@
 extends Control
 
+
 @onready var start_button = $VBoxContainer/start_button as Button
 @onready var options_button = $VBoxContainer/options_button as Button
 @onready var quit_button = $VBoxContainer/quit_button as Button
 @onready var v_box_container = $VBoxContainer as VBoxContainer
 @onready var options = $Options as OptionsMenu
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$VBoxContainer/start_button.grab_focus()
 	options.exit_options_menu.connect(on_exit_options_menu)
 	v_box_container.visible = true
 	options.visible = false
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -37,4 +35,3 @@ func on_exit_options_menu() -> void:
 	v_box_container.visible = true
 	options.visible = false
 	
- 
