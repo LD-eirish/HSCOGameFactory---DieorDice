@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_cnitr"]
 [ext_resource type="Script" path="res://player.gd" id="2_ogs50"]
-[ext_resource type="PackedScene" uid="uid://d3yeoc8hlkmxr" path="res://Boss.tscn" id="3_alvkh"]
+[ext_resource type="PackedScene" path="res://Boss.tscn" id="3_alvkh"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_gwws7"]
 
