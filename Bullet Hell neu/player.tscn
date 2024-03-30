@@ -54,6 +54,14 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("11_0bgqi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_0bgqi")
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_b3vht")
@@ -68,8 +76,8 @@ animations = [{
 "texture": ExtResource("15_c7y3m")
 }],
 "loop": true,
-"name": &"default",
-"speed": 14.0
+"name": &"walk",
+"speed": 5.0
 }]
 
 [node name="player" type="CharacterBody2D"]
@@ -80,3 +88,4 @@ shape = SubResource("RectangleShape2D_aicsb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tmryh")
+animation = &"walk"

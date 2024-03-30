@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-class_name PlayerCharacter
+class_name player
 @onready var _animated_sprite = $AnimatedSprite2D
 
 const max_speed = 400
@@ -17,6 +17,7 @@ func _process(delta):
 func _physics_process(delta):
 	player_movement(delta)
 
+
 func get_input():
 	#direction.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	#direction.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
@@ -27,6 +28,13 @@ func get_input():
 	
 func player_movement(delta):
 	get_input()
+	
+	if velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play("walk")
+	else:
+		$AnimatedSprite2D.flip_h = true
+		$AnimatedSprite2D.play("walk")
 	
 	if direction == Vector2.ZERO:
 		if velocity.length() > (friction * delta):
