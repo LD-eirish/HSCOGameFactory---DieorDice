@@ -6,12 +6,16 @@ extends Control
 @onready var quit_button = $VBoxContainer/quit_button as Button
 @onready var v_box_container = $VBoxContainer as VBoxContainer
 @onready var options = $Options as OptionsMenu
+#@onready var real_tot = $RealTot as CanvasLayer
+
 
 func _ready():
 	$VBoxContainer/start_button.grab_focus()
 	options.exit_options_menu.connect(on_exit_options_menu)
 	v_box_container.visible = true
 	options.visible = false
+	#real_tot.on_transition_finished.connect()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
