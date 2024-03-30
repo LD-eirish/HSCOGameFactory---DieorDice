@@ -7,19 +7,19 @@ script = ExtResource("1_5ifix")
 
 [node name="BAR PLAYER" type="ProgressBar" parent="."]
 modulate = Color(1, 0.282353, 0.431373, 1)
-offset_left = 10.0
-offset_top = 605.0
-offset_right = 320.0
-offset_bottom = 635.0
-max_value = 103.0
-value = 80.0
+offset_left = 58.0
+offset_top = 540.0
+offset_right = 368.0
+offset_bottom = 570.0
+max_value = 50.0
+value = 50.0
 show_percentage = false
 
 [node name="TXT BAR PLAYER" type="Label" parent="."]
-offset_left = 19.0
-offset_top = 609.0
-offset_right = 71.0
-offset_bottom = 632.0
+offset_left = 63.0
+offset_top = 543.0
+offset_right = 115.0
+offset_bottom = 566.0
 text = "Health"
 
 [node name="BAR DIE" type="ProgressBar" parent="."]
