@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://c074lo552idyf"]
+
+[ext_resource type="Script" path="res://UI.gd" id="1_5ifix"]
+
+[node name="Ui" type="CanvasGroup"]
+script = ExtResource("1_5ifix")
+
+[node name="BAR PLAYER" type="ProgressBar" parent="."]
+modulate = Color(1, 0.282353, 0.431373, 1)
+offset_left = 10.0
+offset_top = 605.0
+offset_right = 320.0
+offset_bottom = 635.0
+max_value = 103.0
+value = 80.0
+show_percentage = false
+
+[node name="TXT BAR PLAYER" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 609.0
+offset_right = 71.0
+offset_bottom = 632.0
+text = "Health"
+
+[node name="BAR DIE" type="ProgressBar" parent="."]
+modulate = Color(1, 0.282353, 0.431373, 1)
+offset_left = 130.0
+offset_top = 8.0
+offset_right = 992.0
+offset_bottom = 35.0
+value = 100.0
+show_percentage = false
+
+[node name="TXT BAR DIE d4" type="Label" parent="."]
+offset_left = 524.0
+offset_top = 9.0
+offset_right = 586.0
+offset_bottom = 32.0
+text = "Dice: d4"
+
+[node name="TXT BAR DIE d6" type="Label" parent="."]
+offset_left = 524.0
+offset_top = 9.0
+offset_right = 586.0
+offset_bottom = 32.0
+text = "Dice: d6"
+
+[node name="TXT BAR DIE d8" type="Label" parent="."]
+offset_left = 524.0
+offset_top = 9.0
+offset_right = 586.0
+offset_bottom = 32.0
+text = "Dice: d8"
+
+[node name="TXT BAR DIE d10" type="Label" parent="."]
+offset_left = 520.0
+offset_top = 9.0
+offset_right = 591.0
+offset_bottom = 32.0
+text = "Dice: d10"
+
+[node name="TXT BAR DIE d12" type="Label" parent="."]
+offset_left = 520.0
+offset_top = 9.0
+offset_right = 591.0
+offset_bottom = 32.0
+text = "Dice: d12"
+
+[node name="TXT BAR DIE d20" type="Label" parent="."]
+offset_left = 520.0
+offset_top = 9.0
+offset_right = 591.0
+offset_bottom = 32.0
+text = "Dice: d20"
