@@ -8,6 +8,7 @@ extends Control
 @onready var options = $Options as OptionsMenu
 #@onready var real_tot = $RealTot as CanvasLayer
 
+const GameOver = preload("res://scenes/GameOver.gd")
 
 func _ready():
 	$VBoxContainer/start_button.grab_focus()
