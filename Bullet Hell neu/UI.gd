@@ -27,35 +27,40 @@ func _1to2():
 	txt_bar_die_d_6.visible = true
 	bar_die.max_value = 75
 	bar_die.value = bar_die.max_value
-	custom.connect(RealTot.playphase())
+	#custom.connect(RealTot.playphase())
+	custom.emit()
 
 func _2to3():
 	txt_bar_die_d_6.visible = false
 	txt_bar_die_d_8.visible = true
 	bar_die.max_value = 125
 	bar_die.value = bar_die.max_value
-	custom.connect(RealTot.playphase())
+	#custom.connect(RealTot.playphase())
+	custom.emit()
 
 func _3to4():
 	txt_bar_die_d_8.visible = false
 	txt_bar_die_d_10.visible = true
 	bar_die.max_value = 200
 	bar_die.value = bar_die.max_value
-	custom.connect(RealTot.playphase())
+	#custom.connect(RealTot.playphase())
+	custom.emit()
 
 func _4to5():
 	txt_bar_die_d_10.visible = false
 	txt_bar_die_d_12.visible = true
 	bar_die.max_value = 250
 	bar_die.value = bar_die.max_value
-	custom.connect(RealTot.playphase())
+	#custom.connect(RealTot.playphase())
+	custom.emit()
 
 func _5to6():
 	txt_bar_die_d_12.visible = false
 	txt_bar_die_d_20.visible = true
 	bar_die.max_value = 1000
 	bar_die.value = bar_die.max_value
-	custom.connect(RealTot.playphase())
+	#custom.connect(RealTot.playphase())
+	custom.emit()
 	
 func _on_player_take_dmg(TAKEN_DMG):
 	player_live = player_live - TAKEN_DMG

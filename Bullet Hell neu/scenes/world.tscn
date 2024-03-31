@@ -1,11 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://bmr3t6me1xthw"]
+[gd_scene load_steps=28 format=3 uid="uid://bmr3t6me1xthw"]
 
+[ext_resource type="Script" path="res://RealTOT.gd" id="1_68nl5"]
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_ehuas"]
 [ext_resource type="Texture2D" uid="uid://b4lt6dqy8jh82" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
 [ext_resource type="Script" path="res://Bulletmanager.gd" id="4_dpm2k"]
 [ext_resource type="PackedScene" uid="uid://ht3csjgf2tno" path="res://UI.tscn" id="5_8tcvv"]
 [ext_resource type="PackedScene" uid="uid://c0udvvkf3kw2y" path="res://bullet_new.tscn" id="5_rbqbs"]
 [ext_resource type="PackedScene" uid="uid://d4dg0jolqx2yl" path="res://Boss.tscn" id="6_u0yag"]
+[ext_resource type="PackedScene" uid="uid://b23we266bfdub" path="res://RealTOT.tscn" id="8_msrvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ordw"]
 size = Vector2(4075.75, 40)
@@ -82,6 +84,7 @@ b = Vector2(-224, -142)
 
 [node name="world" type="Node2D"]
 position = Vector2(-14, -9)
+script = ExtResource("1_68nl5")
 
 [node name="Dm\'sWorldInChaos" type="Sprite2D" parent="."]
 position = Vector2(-758, 514)
@@ -101,8 +104,6 @@ limit_top = -1500
 limit_right = 1250
 limit_bottom = 2550
 editor_draw_limits = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="player"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-124, 2437)
@@ -200,7 +201,10 @@ bullet_scene = ExtResource("5_rbqbs")
 [node name="Boss" parent="." instance=ExtResource("6_u0yag")]
 position = Vector2(-1351, 226)
 
+[node name="RealTot" parent="." instance=ExtResource("8_msrvk")]
+
 [connection signal="shoot" from="player" to="Bulletmanager" method="_on_player_shoot"]
 [connection signal="take_dmg" from="player" to="player/Ui" method="_on_player_take_dmg"]
+[connection signal="custom" from="player/Ui" to="RealTot" method="_on_ui_custom"]
 [connection signal="shoot" from="Boss" to="Bulletmanager" method="_on_boss_shoot"]
 [connection signal="take_dmg" from="Boss" to="player/Ui" method="_on_boss_take_dmg"]

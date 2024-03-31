@@ -1,8 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://b23we266bfdub"]
+[gd_scene load_steps=33 format=3 uid="uid://b23we266bfdub"]
 
 [ext_resource type="FontFile" uid="uid://be12gudqqajww" path="res://BLOODY.TTF" id="1_hvf6n"]
 [ext_resource type="Script" path="res://RealTOT.gd" id="1_vq0u2"]
-[ext_resource type="Script" path="res://Label.gd" id="2_nrdwj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d4f70"]
 font = ExtResource("1_hvf6n")
@@ -395,7 +394,6 @@ text = "
 Don't think you can escape, foul one"
 label_settings = SubResource("LabelSettings_d4f70")
 horizontal_alignment = 1
-script = ExtResource("2_nrdwj")
 
 [node name="Ani1" type="AnimationPlayer" parent="Label1"]
 libraries = {
@@ -415,7 +413,6 @@ text = "
 This isn't even my final form"
 label_settings = SubResource("LabelSettings_jjdbo")
 horizontal_alignment = 1
-script = ExtResource("2_nrdwj")
 
 [node name="Ani2" type="AnimationPlayer" parent="Label2"]
 libraries = {
@@ -435,7 +432,6 @@ text = "
 You were supposed to care about us"
 label_settings = SubResource("LabelSettings_dkhx7")
 horizontal_alignment = 1
-script = ExtResource("2_nrdwj")
 
 [node name="Ani3" type="AnimationPlayer" parent="Label3"]
 libraries = {
@@ -455,7 +451,6 @@ text = "
 This Still is not my final form, fool"
 label_settings = SubResource("LabelSettings_b1cci")
 horizontal_alignment = 1
-script = ExtResource("2_nrdwj")
 
 [node name="Ani4" type="AnimationPlayer" parent="Label4"]
 libraries = {
@@ -475,7 +470,6 @@ text = "
 Your anger will be your downfall"
 label_settings = SubResource("LabelSettings_2lsow")
 horizontal_alignment = 1
-script = ExtResource("2_nrdwj")
 
 [node name="Ani5" type="AnimationPlayer" parent="Label5"]
 libraries = {
