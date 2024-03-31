@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://b57i12htv0a84" path="res://fire.png" id="2_agf4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji3jf"]
-size = Vector2(10.5, 14.3333)
 
 [node name="bullet" type="Area2D"]
 script = ExtResource("1_fu7tc")

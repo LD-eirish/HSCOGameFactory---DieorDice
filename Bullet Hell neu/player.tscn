@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://621xj030j3se"]
+[gd_scene load_steps=20 format=3 uid="uid://621xj030j3se"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_bg7vl"]
 [ext_resource type="Texture2D" uid="uid://532lhphqnunc" path="res://GODOT/1..png" id="1_pgiib"]
@@ -80,6 +80,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aicsb"]
+size = Vector2(8.5, 15.1667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ja81l"]
+size = Vector2(50, 91)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_bg7vl")
@@ -94,6 +98,10 @@ sprite_frames = SubResource("SpriteFrames_tmryh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_aicsb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_ja81l")
 
 [connection signal="timeout" from="ShortTimer" to="." method="_on_short_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
