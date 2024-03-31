@@ -20,7 +20,7 @@ func _process(delta):
 		var player_pos = get_parent().get_node("player").global_position
 		var dir = player_pos - position
 		shoot.emit(position, dir)
-		print(player_pos)
+		#print(player_pos)
 		can_shoot = false
 		$ShortTimer.start()
 
