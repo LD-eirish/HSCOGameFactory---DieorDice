@@ -9,7 +9,7 @@ extends CanvasGroup
 @onready var bar_die = $"BAR DIE"
 @onready var bar_player = $"BAR PLAYER"
 @onready var BossPhase = 1
-
+signal custom
 
 func _ready():
 	txt_bar_die_d_4.visible = true
@@ -21,36 +21,40 @@ func _ready():
 	bar_die.max_value = 50
 	bar_die.value = bar_die.max_value
 
-	
 func _1to2():
 	txt_bar_die_d_4.visible = false
 	txt_bar_die_d_6.visible = true
 	bar_die.max_value = 75
 	bar_die.value = bar_die.max_value
+	custom.connect(RealTot.playphase())
 
 func _2to3():
 	txt_bar_die_d_6.visible = false
 	txt_bar_die_d_8.visible = true
 	bar_die.max_value = 125
 	bar_die.value = bar_die.max_value
+	custom.connect(RealTot.playphase())
 
 func _3to4():
 	txt_bar_die_d_8.visible = false
 	txt_bar_die_d_10.visible = true
 	bar_die.max_value = 200
 	bar_die.value = bar_die.max_value
+	custom.connect(RealTot.playphase())
 
 func _4to5():
 	txt_bar_die_d_10.visible = false
 	txt_bar_die_d_12.visible = true
 	bar_die.max_value = 250
 	bar_die.value = bar_die.max_value
+	custom.connect(RealTot.playphase())
 
 func _5to6():
 	txt_bar_die_d_12.visible = false
 	txt_bar_die_d_20.visible = true
 	bar_die.max_value = 1000
 	bar_die.value = bar_die.max_value
+	custom.connect(RealTot.playphase())
 
 func _dieDMG(DEALT_DMG):
 	bar_die.value_changed = bar_die.value_changed - DEALT_DMG
