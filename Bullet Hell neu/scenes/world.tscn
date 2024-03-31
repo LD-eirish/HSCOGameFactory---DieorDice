@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bmr3t6me1xthw"]
+[gd_scene load_steps=27 format=3 uid="uid://bmr3t6me1xthw"]
 
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_ehuas"]
 [ext_resource type="Texture2D" uid="uid://b4lt6dqy8jh82" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ht3csjgf2tno" path="res://UI.tscn" id="5_8tcvv"]
 [ext_resource type="PackedScene" uid="uid://c0udvvkf3kw2y" path="res://bullet_new.tscn" id="5_rbqbs"]
 [ext_resource type="PackedScene" uid="uid://d4dg0jolqx2yl" path="res://Boss.tscn" id="6_u0yag"]
+[ext_resource type="PackedScene" uid="uid://b23we266bfdub" path="res://RealTOT.tscn" id="7_yc14m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ordw"]
 size = Vector2(4075.75, 40)
@@ -199,6 +200,8 @@ bullet_scene = ExtResource("5_rbqbs")
 
 [node name="Boss" parent="." instance=ExtResource("6_u0yag")]
 position = Vector2(-1351, 226)
+
+[node name="RealTot" parent="." instance=ExtResource("7_yc14m")]
 
 [connection signal="shoot" from="player" to="Bulletmanager" method="_on_player_shoot"]
 [connection signal="take_dmg" from="player" to="player/Ui" method="_on_player_take_dmg"]
