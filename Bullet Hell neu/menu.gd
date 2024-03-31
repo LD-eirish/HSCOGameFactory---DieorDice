@@ -16,7 +16,7 @@ func _ready():
 	v_box_container.visible = true
 	options.visible = false
 	#Lines for Sound
-	
+	AudioManager.intro_sfx.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 

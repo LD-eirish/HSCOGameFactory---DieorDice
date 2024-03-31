@@ -19,7 +19,8 @@ var aniCount = 0
 func _on_ui_custom():
 	aniCount= aniCount +1
 	if aniCount == 1:
-		$Label1/Ani1.play("Ani1") #KA ob der Tag zu dem Ani Player funktioniert
+		$Label1/Ani1.play("Ani") #KA ob der Tag zu dem Ani Player funktioniert
+		AudioManager.dont_think_you_can_escape_sfx.play()
 	elif aniCount == 2:
 		$Label2/Ani2.play("Ani2")
 	elif aniCount == 3:

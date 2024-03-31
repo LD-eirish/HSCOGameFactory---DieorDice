@@ -23,19 +23,17 @@ script = ExtResource("1_p1yxs")
 
 [node name="IntroSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_mu5x8")
-volume_db = -10.0
+volume_db = -24.054
 
 [node name="Fireball SoundSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_2v3xm")
-volume_db = -10.0
+volume_db = -15.622
 
 [node name="Dont think you can escapeSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_03j5l")
-volume_db = -10.0
 
 [node name="Bow to your creatorSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_nsjtm")
-volume_db = -10.0
 
 [node name="Game OverSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_6yec4")
