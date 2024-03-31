@@ -9,7 +9,7 @@ func _on_player_shoot(pos, dir):
 	add_child(bullet)
 	bullet.position = pos
 	bullet.direction = dir.normalized()
-	bullet.add_to_group("bullets")
+	bullet.add_to_group("player_bullet")
 	
 
 
@@ -18,4 +18,4 @@ func _on_boss_shoot(pos, dir):
 	add_child(bullet)
 	bullet.position = pos
 	bullet.direction = dir.normalized()
-	bullet.add_to_group("bullets")
+	bullet.add_to_group("boss_bullet")

@@ -64,5 +64,5 @@ func _on_short_timer_timeout():
 	can_shoot = true
 
 func _on_area_2d_area_entered(area):
-	if area.is_in_group("bullet"):
+	if area.is_in_group("boss_bullet"):
 		dmg.emit(10)
