@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bqwkr6s1geiuu"]
+[gd_scene load_steps=16 format=3 uid="uid://d4dg0jolqx2yl"]
 
 [ext_resource type="Script" path="res://Boss.gd" id="1_v4fd5"]
 [ext_resource type="Texture2D" uid="uid://5gpsfrxm85ls" path="res://GODOT/Boss1/1.png" id="1_wa07e"]

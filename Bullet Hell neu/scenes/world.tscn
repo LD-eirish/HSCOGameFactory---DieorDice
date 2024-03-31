@@ -1,13 +1,11 @@
-
-[gd_scene load_steps=7 format=3 uid="uid://bmr3t6me1xthw"]
-
+[gd_scene load_steps=9 format=3 uid="uid://bmr3t6me1xthw"]
 
 [ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_ehuas"]
-[ext_resource type="Texture2D" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
+[ext_resource type="Texture2D" uid="uid://b4lt6dqy8jh82" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
 [ext_resource type="Script" path="res://Bulletmanager.gd" id="4_dpm2k"]
-[ext_resource type="PackedScene" path="res://UI.tscn" id="5_8tcvv"]
-[ext_resource type="PackedScene" uid="uid://c28lv5hy0j3lv" path="res://bullet_new.tscn" id="5_rbqbs"]
-[ext_resource type="PackedScene" uid="uid://bqwkr6s1geiuu" path="res://Boss.tscn" id="6_u0yag"]
+[ext_resource type="PackedScene" uid="uid://ht3csjgf2tno" path="res://UI.tscn" id="5_8tcvv"]
+[ext_resource type="PackedScene" uid="uid://c0udvvkf3kw2y" path="res://bullet_new.tscn" id="5_rbqbs"]
+[ext_resource type="PackedScene" path="res://Boss.tscn" id="6_u0yag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ordw"]
 size = Vector2(4075.75, 40)
@@ -23,8 +21,7 @@ position = Vector2(-758, 514)
 texture = ExtResource("3_i5x0n")
 
 [node name="player" parent="." instance=ExtResource("1_ehuas")]
-position = Vector2(368, 251)
-
+position = Vector2(-785, 128)
 
 [node name="Ui" parent="player" instance=ExtResource("5_8tcvv")]
 position = Vector2(-1139, -588)
@@ -64,7 +61,7 @@ script = ExtResource("4_dpm2k")
 bullet_scene = ExtResource("5_rbqbs")
 
 [node name="Boss" parent="." instance=ExtResource("6_u0yag")]
-position = Vector2(870, 292)
+position = Vector2(-1351, 226)
 
 [connection signal="shoot" from="player" to="Bulletmanager" method="_on_player_shoot"]
 [connection signal="shoot" from="Boss" to="Bulletmanager" method="_on_boss_shoot"]

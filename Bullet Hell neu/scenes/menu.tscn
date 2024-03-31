@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://menu.gd" id="1_xl3hf"]
 [ext_resource type="PackedScene" uid="uid://npxuga8h2myi" path="res://scenes/options.tscn" id="2_kj2a1"]
-[ext_resource type="PackedScene" path="res://RealTOT.tscn" id="3_0xvd2"]
+[ext_resource type="PackedScene" uid="uid://b23we266bfdub" path="res://RealTOT.tscn" id="3_0xvd2"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
