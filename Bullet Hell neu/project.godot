@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-RealTot="*res://RealTOT.tscn"
 AudioManager="*res://audio_manager.tscn"
+RealTot="*res://RealTOT.tscn"
 
 [display]
 
