@@ -61,6 +61,9 @@ func player_movement(delta):
 		
 	move_and_slide()
 
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 
 func _on_short_timer_timeout():
 	can_shoot = true
