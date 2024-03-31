@@ -36,9 +36,9 @@ func _process(delta):
 			if random_number == 1:	
 				AudioManager.bow_to_your_creator_sfx.play()
 			elif random_number == 2:
-				AudioManager.how_do_i_deserve_this_sfx.plsx()
+				AudioManager.how_do_i_deserve_this_sfx.play()
 			elif random_number == 3:
-				AudioManager.this_is_not_happening_sfx.plsx()
+				AudioManager.this_is_not_happening_sfx.play()
 			
 		$ShortTimer.start()
 
