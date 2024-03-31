@@ -7,7 +7,7 @@ class_name player
 signal shoot
 var can_shoot : bool
 
-signal dmg
+signal take_dmg
 
 const max_speed = 400
 const accel = 1500
@@ -65,4 +65,4 @@ func _on_short_timer_timeout():
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("boss_bullet"):
-		dmg.emit(10)
+		take_dmg.emit(10)
