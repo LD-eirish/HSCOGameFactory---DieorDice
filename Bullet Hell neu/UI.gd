@@ -78,3 +78,7 @@ func _playerDMG(TAKEN_DMG):
 	if bar_player.value_changed == bar_player.min_value:
 		get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 
+
+
+func _on_player_dmg():
+	pass # Replace with function body.

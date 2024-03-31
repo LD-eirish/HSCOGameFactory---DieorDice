@@ -17,8 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dc3g1ieo61ykl" path="res://GODOT/14.png" id="14_auyw8"]
 [ext_resource type="Texture2D" uid="uid://dycmw1mn8gfp6" path="res://GODOT/15.png" id="15_c7y3m"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aicsb"]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmryh"]
 resource_local_to_scene = true
 animations = [{
@@ -81,16 +79,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D"]
-script = ExtResource("1_bg7vl")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aicsb"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(6, 6)
-shape = SubResource("RectangleShape2D_aicsb")
+[node name="player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_bg7vl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tmryh")
 
 [node name="ShortTimer" type="Timer" parent="."]
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_aicsb")
+
 [connection signal="timeout" from="ShortTimer" to="." method="_on_short_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

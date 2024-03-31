@@ -63,5 +63,6 @@ bullet_scene = ExtResource("5_rbqbs")
 [node name="Boss" parent="." instance=ExtResource("6_u0yag")]
 position = Vector2(-1351, 226)
 
+[connection signal="dmg" from="player" to="player/Ui" method="_on_player_dmg"]
 [connection signal="shoot" from="player" to="Bulletmanager" method="_on_player_shoot"]
 [connection signal="shoot" from="Boss" to="Bulletmanager" method="_on_boss_shoot"]

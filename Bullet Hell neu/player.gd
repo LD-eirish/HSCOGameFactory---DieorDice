@@ -2,9 +2,12 @@ extends CharacterBody2D
 
 class_name player
 @onready var _animated_sprite = $AnimatedSprite2D
+#var myscript = UI.gd.new()
 
 signal shoot
 var can_shoot : bool
+
+signal dmg
 
 const max_speed = 400
 const accel = 1500
@@ -59,3 +62,8 @@ func player_movement(delta):
 
 func _on_short_timer_timeout():
 	can_shoot = true
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("bullet"):
+		print("collide")
+		#_playerDMG()
