@@ -205,6 +205,7 @@ position = Vector2(-1351, 226)
 
 [connection signal="shoot" from="player" to="Bulletmanager" method="_on_player_shoot"]
 [connection signal="take_dmg" from="player" to="player/Ui" method="_on_player_take_dmg"]
+[connection signal="AnimationBossPhase" from="player/Ui" to="Boss" method="_on_ui_animation_boss_phase"]
 [connection signal="custom" from="player/Ui" to="RealTot" method="_on_ui_custom"]
 [connection signal="shoot" from="Boss" to="Bulletmanager" method="_on_boss_shoot"]
 [connection signal="take_dmg" from="Boss" to="player/Ui" method="_on_boss_take_dmg"]

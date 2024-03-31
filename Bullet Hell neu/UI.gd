@@ -11,6 +11,7 @@ extends CanvasGroup
 @onready var BossPhase = 1
 signal custom
 var player_live = 50
+signal AnimationBossPhase
 
 func _ready():
 	txt_bar_die_d_4.visible = true
@@ -29,6 +30,7 @@ func _1to2():
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
 	custom.emit()
+	AnimationBossPhase.emit()
 
 func _2to3():
 	txt_bar_die_d_6.visible = false
@@ -37,6 +39,7 @@ func _2to3():
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
 	custom.emit()
+	AnimationBossPhase.emit()
 
 func _3to4():
 	txt_bar_die_d_8.visible = false
@@ -45,6 +48,7 @@ func _3to4():
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
 	custom.emit()
+	AnimationBossPhase.emit()
 
 func _4to5():
 	txt_bar_die_d_10.visible = false
@@ -53,6 +57,7 @@ func _4to5():
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
 	custom.emit()
+	AnimationBossPhase.emit()
 
 func _5to6():
 	txt_bar_die_d_12.visible = false
@@ -61,7 +66,8 @@ func _5to6():
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
 	custom.emit()
-	
+	AnimationBossPhase.emit()
+
 func _on_player_take_dmg(TAKEN_DMG):
 	player_live = player_live - TAKEN_DMG
 	bar_player.value = player_live
