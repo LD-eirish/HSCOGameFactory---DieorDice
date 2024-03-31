@@ -1,0 +1,76 @@
+[gd_scene load_steps=18 format=3 uid="uid://d4k0mkatatvxx"]
+
+[ext_resource type="Script" path="res://AudioManager.gd" id="1_p1yxs"]
+[ext_resource type="AudioStream" uid="uid://tsrky1at4ns1" path="res://Done/Game Start.mp3" id="2_mu5x8"]
+[ext_resource type="AudioStream" uid="uid://blndbyc1p18dh" path="res://Done/Fireball.mp3" id="3_2v3xm"]
+[ext_resource type="AudioStream" uid="uid://cmu1coch43lrr" path="res://Done/Dont think you can escape foul one.mp3" id="4_03j5l"]
+[ext_resource type="AudioStream" uid="uid://binj0ex1bc835" path="res://Done/Bow to your creator.mp3" id="5_nsjtm"]
+[ext_resource type="AudioStream" uid="uid://b6to3wy4bheh1" path="res://Done/Game_Over.mp3" id="6_6yec4"]
+[ext_resource type="AudioStream" uid="uid://bn7kyd0l3pn" path="res://Done/How do I deserve this - MC.mp3" id="7_tslfi"]
+[ext_resource type="AudioStream" uid="uid://23poyc4tqe7t" path="res://Done/Main BGM Edit.mp3" id="8_qx0rp"]
+[ext_resource type="AudioStream" uid="uid://dn1ye313bt3w2" path="res://Done/The dice have fallen.mp3" id="9_7rpyd"]
+[ext_resource type="AudioStream" uid="uid://c53e41coh3j78" path="res://Done/This is not happening - MC.mp3" id="10_i2jhu"]
+[ext_resource type="AudioStream" uid="uid://dldwa6tkh5n1t" path="res://Done/This isnt even my final form.mp3" id="11_4qki3"]
+[ext_resource type="AudioStream" uid="uid://o0tk17mmk85e" path="res://Done/This still is not my final form.mp3" id="12_5q2vx"]
+[ext_resource type="AudioStream" uid="uid://cgt07iugiakgg" path="res://Done/You were supposed to care about us.mp3" id="13_53os2"]
+[ext_resource type="AudioStream" uid="uid://vpkmii0oc4cm" path="res://Done/You will never reach the final form.mp3" id="14_igh7x"]
+[ext_resource type="AudioStream" uid="uid://diwm3frvkrjio" path="res://Done/YOU WON (as if).mp3" id="15_vfbef"]
+[ext_resource type="AudioStream" uid="uid://bnibl7rcf2k67" path="res://Done/Your anger will be you downfall.mp3" id="16_ue3t2"]
+[ext_resource type="AudioStream" uid="uid://crvriujf63ary" path="res://Done/yOUr EnD iS nIgH.mp3" id="17_s6ugw"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_p1yxs")
+
+[node name="IntroSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mu5x8")
+volume_db = -24.054
+
+[node name="Fireball SoundSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2v3xm")
+volume_db = -15.622
+
+[node name="Dont think you can escapeSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_03j5l")
+
+[node name="Bow to your creatorSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nsjtm")
+
+[node name="Game OverSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_6yec4")
+volume_db = -10.0
+
+[node name="How do I deserve thisSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_tslfi")
+
+[node name="MainBGMSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qx0rp")
+volume_db = -5.315
+autoplay = true
+
+[node name="The dice have fallenSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_7rpyd")
+
+[node name="This is not happeningSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_i2jhu")
+
+[node name="This isnt even my final formSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_4qki3")
+
+[node name="Still not final formSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_5q2vx")
+
+[node name="Supposed to careSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_53os2")
+
+[node name="You will never reach the final formSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_igh7x")
+
+[node name="You WonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_vfbef")
+volume_db = -2.811
+
+[node name="Anger will downfallSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_ue3t2")
+
+[node name="END is nighSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_s6ugw")

@@ -15,6 +15,8 @@ const max_speed = 400
 const accel = 1500
 const friction = 600
 
+var rng = RandomNumberGenerator.new()
+var random_number
 var direction = Vector2.ZERO
 
 func _ready():
@@ -28,7 +30,18 @@ func _process(delta):
 	if Input.is_action_pressed("fire") and can_shoot:
 		var dir = get_global_mouse_position() - position
 		shoot.emit(position, dir)
+		random_number = rng.randi_range(1, 100)
+		AudioManager.fireball_sound_sfx.play()
 		can_shoot = false
+		if random_number>=99:
+			random_number = rng.randi_range(1, 3)
+			if random_number == 1:	
+				AudioManager.bow_to_your_creator_sfx.play()
+			elif random_number == 2:
+				AudioManager.how_do_i_deserve_this_sfx.play()
+			elif random_number == 3:
+				AudioManager.this_is_not_happening_sfx.play()
+			
 		$ShortTimer.start()
 
 func _physics_process(delta):

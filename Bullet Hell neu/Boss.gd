@@ -4,6 +4,8 @@ var speed = 0.3
 
 signal shoot
 var can_shoot : bool
+var rng = RandomNumberGenerator.new()
+var random_number
 
 signal take_dmg
 
@@ -17,6 +19,15 @@ func _process(delta):
 		shoot.emit(position, dir)
 		#print(player_pos)
 		can_shoot = false
+		random_number = rng.randi_range(1, 100)
+		if random_number>=99:
+			random_number = rng.randi_range(1, 3)
+			if random_number == 1:	
+				AudioManager.end_is_nigh_sfx.play()
+			elif random_number == 2:
+				AudioManager.the_dice_have_fallen_sfx.play()
+			elif random_number == 3:
+				AudioManager.you_will_never_reach_the_final_form_sfx.play()
 		$ShortTimer.start()
 
 func _physics_process(delta):

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn1ye313bt3w2"
+path="res://.godot/imported/The dice have fallen.mp3-ac7680be080f4dfa23d53f5a19df33e1.mp3str"
+
+[deps]
+
+source_file="res://Done/The dice have fallen.mp3"
+dest_files=["res://.godot/imported/The dice have fallen.mp3-ac7680be080f4dfa23d53f5a19df33e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

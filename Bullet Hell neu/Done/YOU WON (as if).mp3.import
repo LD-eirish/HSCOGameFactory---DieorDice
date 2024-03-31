@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://diwm3frvkrjio"
+path="res://.godot/imported/YOU WON (as if).mp3-8019ed1336a7e2f116f1f7b01a288516.mp3str"
+
+[deps]
+
+source_file="res://Done/YOU WON (as if).mp3"
+dest_files=["res://.godot/imported/YOU WON (as if).mp3-8019ed1336a7e2f116f1f7b01a288516.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
