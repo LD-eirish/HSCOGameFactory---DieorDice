@@ -56,23 +56,6 @@ func _5to6():
 	bar_die.max_value = 1000
 	bar_die.value = bar_die.max_value
 	custom.connect(RealTot.playphase())
-
-#func _dieDMG(DEALT_DMG):
-	#bar_die.value = bar_die.value - DEALT_DMG
-	#if bar_die.value == bar_die.min_value:
-		#BossPhase +1
-		#if BossPhase == 2:
-			#_1to2()
-		#elif BossPhase == 3:
-			#_2to3()
-		#elif BossPhase == 4:
-			#_3to4()
-		#elif BossPhase == 5:
-			#_4to5()
-		#elif BossPhase == 6:
-			#_5to6()
-		#elif BossPhase == 7:
-			#get_tree().change_scene_to_file("res://scenes/GameWon.tscn")
 	
 func _on_player_take_dmg(TAKEN_DMG):
 	player_live = player_live - TAKEN_DMG
