@@ -59,7 +59,7 @@ func _5to6():
 func _dieDMG(DEALT_DMG):
 	bar_die.value_changed = bar_die.value_changed - DEALT_DMG
 	if bar_die.value == bar_die.min_value:
-		BossPhase +1
+		BossPhase = BossPhase+1
 		if BossPhase == 2:
 			_1to2()
 		elif BossPhase == 3:
