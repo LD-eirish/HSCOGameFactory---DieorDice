@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Bulletmanager.gd" id="4_dpm2k"]
 [ext_resource type="PackedScene" uid="uid://ht3csjgf2tno" path="res://UI.tscn" id="5_8tcvv"]
 [ext_resource type="PackedScene" uid="uid://c0udvvkf3kw2y" path="res://bullet_new.tscn" id="5_rbqbs"]
-[ext_resource type="PackedScene" path="res://Boss.tscn" id="6_u0yag"]
+[ext_resource type="PackedScene" uid="uid://d4dg0jolqx2yl" path="res://Boss.tscn" id="6_u0yag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ordw"]
 size = Vector2(4075.75, 40)
