@@ -24,7 +24,7 @@ func _ready():
 
 func _process(delta):
 	#plays the animated sprites
-	print(velocity)
+	_animated_sprite.play("default")
 	
 	#shooting
 	if Input.is_action_pressed("fire") and can_shoot:
@@ -56,20 +56,12 @@ func get_input():
 func player_movement(delta):
 	get_input()
 	
-	if velocity.x == 0 && velocity.y == 0:
-		$AnimatedSprite2D.play("Stehen")
-	if velocity.x > 1:
-		$AnimatedSprite2D.play("walk")
+	if velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
-	else :
-		$AnimatedSprite2D.play("walk")
-		$AnimatedSprite2D.flip_h = true
-	if velocity.y > 1:
 		$AnimatedSprite2D.play("walk")
 	else:
-		$AnimatedSprite2D.play("hoch")
-	print(velocity)
-		
+		$AnimatedSprite2D.flip_h = true
+		$AnimatedSprite2D.play("walk")
 	
 	if direction == Vector2.ZERO:
 		if velocity.length() > (friction * delta):
