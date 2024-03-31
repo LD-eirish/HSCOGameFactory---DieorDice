@@ -65,5 +65,4 @@ func _on_short_timer_timeout():
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("bullet"):
-		print("collide")
-		#_playerDMG()
+		dmg.emit(10)

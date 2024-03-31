@@ -10,6 +10,7 @@ extends CanvasGroup
 @onready var bar_player = $"BAR PLAYER"
 @onready var BossPhase = 1
 signal custom
+var player_live = 50
 
 func _ready():
 	txt_bar_die_d_4.visible = true
@@ -57,7 +58,7 @@ func _5to6():
 	custom.connect(RealTot.playphase())
 
 func _dieDMG(DEALT_DMG):
-	bar_die.value_changed = bar_die.value_changed - DEALT_DMG
+	bar_die.value = bar_die.value - DEALT_DMG
 	if bar_die.value == bar_die.min_value:
 		BossPhase +1
 		if BossPhase == 2:
@@ -73,12 +74,20 @@ func _dieDMG(DEALT_DMG):
 		elif BossPhase == 7:
 			get_tree().change_scene_to_file("res://scenes/GameWon.tscn")
 	
-func _playerDMG(TAKEN_DMG):
-	bar_player.value_changed = bar_player.value_changed - TAKEN_DMG
-	if bar_player.value_changed == bar_player.min_value:
+#func _playerDMG(TAKEN_DMG):
+	#bar_player.value_changed = bar_player.value_changed - TAKEN_DMG
+	#if bar_player.value_changed == bar_player.min_value:
+		#get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+
+func _on_player_dmg(TAKEN_DMG):
+	#_playerDMG(dmg)
+	player_live = player_live - TAKEN_DMG
+	bar_player.value = player_live
+	#bar_player.value_changed = bar_player.value_changed - TAKEN_DMG
+	if player_live <= bar_player.min_value:
 		get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+	#set_value_no_signal(TAKEN_DMG)
+	#print(bar_player.value)
+	
+		
 
-
-
-func _on_player_dmg():
-	pass # Replace with function body.
