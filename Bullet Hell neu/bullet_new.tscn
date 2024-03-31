@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0udvvkf3kw2y"]
 
 [ext_resource type="Script" path="res://bullet.gd" id="1_fu7tc"]
-[ext_resource type="Texture2D" path="res://fire.png" id="2_agf4y"]
+[ext_resource type="Texture2D" uid="uid://b57i12htv0a84" path="res://fire.png" id="2_agf4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji3jf"]
 
