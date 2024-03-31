@@ -10,6 +10,7 @@ extends CanvasGroup
 @onready var bar_player = $"BAR PLAYER"
 @onready var BossPhase = 1
 signal custom
+signal damageboss
 var player_live = 50
 signal AnimationBossPhase
 
@@ -21,7 +22,9 @@ func _ready():
 	txt_bar_die_d_12.visible = false
 	txt_bar_die_d_20.visible = false
 	bar_die.max_value = 50
+	damageboss.emit(3)
 	bar_die.value = bar_die.max_value
+	
 
 func _1to2():
 	txt_bar_die_d_4.visible = false
@@ -29,6 +32,7 @@ func _1to2():
 	bar_die.max_value = 75
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
+	damageboss.emit(5)
 	custom.emit()
 	AnimationBossPhase.emit()
 
@@ -38,6 +42,7 @@ func _2to3():
 	bar_die.max_value = 125
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
+	damageboss.emit(7)
 	custom.emit()
 	AnimationBossPhase.emit()
 
@@ -47,6 +52,7 @@ func _3to4():
 	bar_die.max_value = 200
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
+	damageboss.emit(8)
 	custom.emit()
 	AnimationBossPhase.emit()
 
@@ -56,6 +62,7 @@ func _4to5():
 	bar_die.max_value = 250
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
+	damageboss.emit(10)
 	custom.emit()
 	AnimationBossPhase.emit()
 
@@ -65,6 +72,7 @@ func _5to6():
 	bar_die.max_value = 1000
 	bar_die.value = bar_die.max_value
 	#custom.connect(RealTot.playphase())
+	damageboss.emit(12)
 	custom.emit()
 	AnimationBossPhase.emit()
 
@@ -90,3 +98,6 @@ func _on_boss_take_dmg(DEALT_DMG):
 			_5to6()
 		elif BossPhase == 7:
 			get_tree().change_scene_to_file("res://scenes/GameWon.tscn")
+
+
+

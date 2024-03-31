@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qulb6u74tw03"]
 
-[ext_resource type="Script" path="res://scenes/GameOver.gd" id="1_t2j5c"]
+[ext_resource type="Script" path="res://scenes/GameWon.gd" id="1_7byjn"]
 
 [sub_resource type="SystemFont" id="SystemFont_1ljuw"]
 font_names = PackedStringArray("Impact")
@@ -14,7 +14,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t2j5c")
+script = ExtResource("1_7byjn")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1

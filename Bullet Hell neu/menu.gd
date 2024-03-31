@@ -6,16 +6,22 @@ extends Control
 @onready var v_box_container = $VBoxContainer as VBoxContainer
 @onready var options = $Options as OptionsMenu
 
+const temp = 0
+
 #@onready var real_tot = $RealTot as CanvasLayer
 
 func _ready():
 	#var scrpt = preload("res://UI.gd").new()
-
+	AudioManager.main_bgm_sfx.stream_paused = true
 	$VBoxContainer/start_button.grab_focus()
 	options.exit_options_menu.connect(on_exit_options_menu)
 	v_box_container.visible = true
 	options.visible = false
+	#Lines for Sound
+	AudioManager.intro_sfx.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
 func _process(delta):
 	pass
 

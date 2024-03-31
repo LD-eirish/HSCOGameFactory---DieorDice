@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ht3csjgf2tno"]
+[gd_scene load_steps=3 format=3 uid="uid://ht3csjgf2tno"]
 
 [ext_resource type="Script" path="res://UI.gd" id="1_5ifix"]
+[ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="2_1v7gs"]
 
 [node name="Ui" type="CanvasGroup"]
 script = ExtResource("1_5ifix")
@@ -73,3 +74,7 @@ offset_top = 9.0
 offset_right = 591.0
 offset_bottom = 32.0
 text = "Dice: d20"
+
+[node name="player" parent="." instance=ExtResource("2_1v7gs")]
+
+[connection signal="damageboss" from="." to="player" method="_on_ui_damageboss"]
