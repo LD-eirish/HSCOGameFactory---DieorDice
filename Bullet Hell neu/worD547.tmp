@@ -26,4 +26,3 @@ offset_bottom = 40.0
 texture = SubResource("ImageTexture_gwws7")
 
 [connection signal="shoot" from="player" to="Bulletmanager" method="_on_player_shoot"]
-[connection signal="shoot" from="Boss" to="Bulletmanager" method="_on_boss_shoot"]
