@@ -38,13 +38,18 @@ func _on_ui_animation_boss_phase():
 	animeCount = animeCount +1
 	$AnimatedSprite2D.play("Phase1")
 	if animeCount == 1:
+		speed = 0.4
 		$AnimatedSprite2D.play("Phase2")
 	elif animeCount == 2:
+		speed = 0.5
 		$AnimatedSprite2D.play("Phase3")
 	elif animeCount == 3:
+		speed = 0.6
 		$AnimatedSprite2D.play("Phase4")
 	elif animeCount == 4:
+		speed = 0.8
 		$AnimatedSprite2D.play("Phase5")
 	elif animeCount == 5:
+		speed = 1
 		$AnimatedSprite2D.play("Phase6")
 
