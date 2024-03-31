@@ -63,7 +63,7 @@ func player_movement(delta):
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_short_timer_timeout():
 	can_shoot = true
