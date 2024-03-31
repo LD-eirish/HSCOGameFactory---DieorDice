@@ -30,4 +30,8 @@ func _on_short_timer_timeout():
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("player_bullet"):
-		take_dmg.emit(10)
+		take_dmg.emit(5)
+
+
+func _on_ui_damageboss():
+	pass # Replace with function body.

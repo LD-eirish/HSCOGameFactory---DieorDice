@@ -5,7 +5,9 @@ class_name player
 #var myscript = UI.gd.new()
 
 signal shoot
+
 var can_shoot : bool
+var out_damage
 
 signal take_dmg
 
@@ -65,4 +67,9 @@ func _on_short_timer_timeout():
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("boss_bullet"):
-		take_dmg.emit(10)
+		take_dmg.emit(out_damage)
+
+#deal_damage.emit(10)
+
+func _on_ui_damageboss(boss_damage):
+	out_damage = boss_damage
