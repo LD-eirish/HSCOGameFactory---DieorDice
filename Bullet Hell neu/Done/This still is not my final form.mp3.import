@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o0tk17mmk85e"
+path="res://.godot/imported/This still is not my final form.mp3-0da1ffd1cb12b81f47a51ea80759d680.mp3str"
+
+[deps]
+
+source_file="res://Done/This still is not my final form.mp3"
+dest_files=["res://.godot/imported/This still is not my final form.mp3-0da1ffd1cb12b81f47a51ea80759d680.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

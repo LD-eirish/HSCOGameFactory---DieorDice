@@ -15,7 +15,11 @@ func _ready():
 	options.exit_options_menu.connect(on_exit_options_menu)
 	v_box_container.visible = true
 	options.visible = false
+	#Lines for Sound
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
 func _process(delta):
 	pass
 

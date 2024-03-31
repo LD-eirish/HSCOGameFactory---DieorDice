@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmu1coch43lrr"
+path="res://.godot/imported/Dont think you can escape foul one.mp3-cd8e25a8bddff138fe73d610aa90b82b.mp3str"
+
+[deps]
+
+source_file="res://Done/Dont think you can escape foul one.mp3"
+dest_files=["res://.godot/imported/Dont think you can escape foul one.mp3-cd8e25a8bddff138fe73d610aa90b82b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c53e41coh3j78"
+path="res://.godot/imported/This is not happening - MC.mp3-fe68071d3249aa56263564bc52997b97.mp3str"
+
+[deps]
+
+source_file="res://Done/This is not happening - MC.mp3"
+dest_files=["res://.godot/imported/This is not happening - MC.mp3-fe68071d3249aa56263564bc52997b97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
