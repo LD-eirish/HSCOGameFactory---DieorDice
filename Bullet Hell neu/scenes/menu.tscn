@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy2fraq8ywpu1"]
+[gd_scene load_steps=7 format=3 uid="uid://cy2fraq8ywpu1"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_xl3hf"]
+[ext_resource type="Texture2D" uid="uid://bh3j70dgukalk" path="res://scenes/Blurred.jpg" id="2_gwsam"]
 [ext_resource type="PackedScene" uid="uid://npxuga8h2myi" path="res://scenes/options.tscn" id="2_kj2a1"]
 [ext_resource type="PackedScene" uid="uid://b23we266bfdub" path="res://RealTOT.tscn" id="3_0xvd2"]
+[ext_resource type="FontFile" uid="uid://be12gudqqajww" path="res://BLOODY.TTF" id="4_8ri1v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3dsnx"]
+line_spacing = 5.0
+font = ExtResource("4_8ri1v")
+font_size = 78
+shadow_size = 19
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,6 +23,11 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_xl3hf")
+
+[node name="Blurred" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.594971, 0.594971)
+texture = ExtResource("2_gwsam")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -46,6 +60,18 @@ text = "Quit"
 layout_mode = 1
 
 [node name="RealTot" parent="." instance=ExtResource("3_0xvd2")]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+Die or dice"
+label_settings = SubResource("LabelSettings_3dsnx")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/options_button" to="." method="_on_options_pressed"]
