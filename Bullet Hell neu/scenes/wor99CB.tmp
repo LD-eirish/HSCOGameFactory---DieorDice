@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmr3t6me1xthw"]
+
+[ext_resource type="PackedScene" uid="uid://621xj030j3se" path="res://player.tscn" id="1_ehuas"]
+[ext_resource type="Texture2D" path="res://DM's World in Chaos.jpg" id="3_i5x0n"]
+[ext_resource type="Texture2D" path="res://Wobin1024.png" id="4_xxq6m"]
+[ext_resource type="PackedScene" path="res://UI.tscn" id="5_8tcvv"]
+
+[sub_resource type="GDScript" id="GDScript_3uf2h"]
+script/source = "extends CharacterBody2D
+
+class_name PlayerCharacter
+
+const max_speed = 400
+const accel = 1500 #Beschleunigung
+const friction = 600 #Reibung
+
+var input = Vector2.ZERO
+
+func _physics_process(delta):
+	player_movement(delta)
+
+
+func get_input():
+	input.x = int(Input.is_action_pressed(\"right\")) - int(Input.is_action_pressed(\"left\"))
+	input.y = int(Input.is_action_pressed(\"down\")) - int(Input.is_action_pressed(\"up\"))
+	return input.normalized()
+	
+func player_movement(delta):
+	input = get_input()
+	
+	if input == Vector2.ZERO:
+		if velocity.length() > (friction * delta):
+			velocity -= velocity.normalized() * (friction * delta)
+		else:
+			velocity = Vector2.ZERO
+	else:
+		velocity += (input * accel * delta)
+		velocity = velocity.limit_length(max_speed)
+		
+	move_and_slide()
+"
+
+[node name="world" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Dm\'sWorldInChaos" type="Sprite2D" parent="."]
+position = Vector2(2047, 2050)
+texture = ExtResource("3_i5x0n")
+
+[node name="player" parent="." instance=ExtResource("1_ehuas")]
+position = Vector2(600, 300)
+script = SubResource("GDScript_3uf2h")
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.55, 0.55)
+
+[node name="Ui" parent="player/Camera2D" instance=ExtResource("5_8tcvv")]
+position = Vector2(-1139, -588)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D2" type="Sprite2D" parent="player"]
+position = Vector2(19, -20)
+scale = Vector2(0.189941, 0.20166)
+texture = ExtResource("4_xxq6m")
