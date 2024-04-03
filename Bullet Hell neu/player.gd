@@ -56,6 +56,9 @@ func get_input():
 func player_movement(delta):
 	get_input()
 	
+	if velocity.y > 0:
+		$AnimatedSprite2D.play("hoch")
+	
 	if velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
 		$AnimatedSprite2D.play("walk")
