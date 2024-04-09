@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cupdd0j6xvwnr" path="res://GODOT/13.png" id="13_1l7cy"]
 [ext_resource type="Texture2D" uid="uid://dc3g1ieo61ykl" path="res://GODOT/14.png" id="14_auyw8"]
 [ext_resource type="Texture2D" uid="uid://dycmw1mn8gfp6" path="res://GODOT/15.png" id="15_c7y3m"]
-[ext_resource type="PackedScene" uid="uid://ht3csjgf2tno" path="res://UI.tscn" id="17_4glgb"]
+[ext_resource type="PackedScene" uid="uid://bdounve2fo2qi" path="res://menu.tscn" id="17_4glgb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmryh"]
 resource_local_to_scene = true
